@@ -1,0 +1,38 @@
+# Node.js / JavaScript
+node_modules/           # Modules installés par npm ou yarn, très lourds, à ne pas versionner
+npm-debug.log*          # Logs d’erreur npm
+yarn-debug.log*         # Logs d’erreur yarn
+yarn-error.log*         # Logs d’erreur yarn
+package-lock.json       # Fichier généré automatiquement par npm
+yarn.lock               # Fichier généré automatiquement par yarn
+
+# Build / sortie
+/dist/                  # Dossier de build généré (production)
+ /build/                # Dossier de build généré (React, Vue, etc.)
+ /out/                  # Autres dossiers de sortie possibles
+
+# Environnement / secrets
+.env                    # Variables sensibles (API keys, mots de passe)
+.env.local              # Variables locales
+.env.*.local            # Tous les fichiers .env locaux
+
+# Logs
+logs/                   # Dossier contenant les logs
+*.log                   # Fichiers de log
+*.log.*                 # Fichiers de log supplémentaires
+
+# Système
+.DS_Store               # Fichiers macOS inutiles
+Thumbs.db               # Fichiers Windows inutiles
+*.swp                   # Fichiers temporaires Vim
+*.swo                   # Fichiers temporaires Vim
+
+# IDE / éditeurs
+.vscode/                # Configurations VSCode locales
+.idea/                  # Configurations IntelliJ / WebStorm
+*.sublime-workspace     # Configurations Sublime Text
+*.sublime-project       # Configurations Sublime Text
+
+# Pi Network spécifiques (si fichiers temporaires)
+*.tmp                   # Fichiers temporaires éventuels
+commit'n:Add.gitignore.
