@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DANALLODE HUB</title>
+
+  <!-- Style principal -->
+  <link rel="stylesheet" href="../src/style.css" />
+
+  <!-- Description pour Pi Network -->
+  <meta name="description" content="DANALLODE HUB est une plateforme panafricaine d’innovation, de technologie et de structuration des projets." />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>DANALLODE HUB</h1>
+    <p>Plateforme panafricaine d’innovation, de technologie et de structuration</p>
+  </header>
+
+  <main class="container">
+
+    <!-- SECTION : A PROPOS -->
+    <section id="about">
+      <h2>À propos</h2>
+      <div class="card">
+        <p>
+          DANALLODE HUB est un espace numérique dédié à la structuration,
+          à l’accompagnement et à la mise en valeur des projets technologiques,
+          entrepreneuriaux et sociaux en Afrique.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION : VISION -->
+    <section id="vision">
+      <h2>Vision</h2>
+      <div class="card">
+        <p>
+          Notre vision est de bâtir un hub panafricain fondé sur le partage,
+          la connaissance, la technologie et l’innovation responsable,
+          au service du développement durable.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION : SERVICES -->
+    <section id="services">
+      <h2>Domaines d’intervention</h2>
+
+      <div class="card">
+        <p>• Innovation technologique</p>
+        <p>• Structuration de projets</p>
+        <p>• Hub collaboratif</p>
+        <p>• Recherche et développement</p>
+        <p>• Solutions panafricaines</p>
+      </div>
+    </section>
+
+    <!-- SECTION : PI NETWORK -->
+    <section id="pi-network">
+      <h2>Intégration Pi Network</h2>
+      <div class="card">
+        <p>
+          DANALLODE HUB s’inscrit dans l’écosystème Pi Network afin de proposer
+          une plateforme accessible, décentralisée et communautaire.
+        </p>
+        <p>
+          L’application est actuellement en phase exploratoire et ouverte
+          à la découverte par les utilisateurs Pi.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION : STATUT -->
+    <section id="status">
+      <h2>Statut de l’application</h2>
+      <div class="card">
+        <p>
+          Application en développement progressif.
+          Certaines fonctionnalités avancées seront activées
+          après validation officielle par Pi Network.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 – DANALLODE HUB<br />
+      Auteur : ALLODE Adantchigbé Hagbégnon Tex
+    </p>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="../src/main.js"></script>
+
+</body>
+</html>
+Add initial public index page for DANALLODE HUB
