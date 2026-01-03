@@ -1,0 +1,26 @@
+DANALLODE-HUB/
+│
+├── README.md               # Présentation complète du projet
+├── CHANGELOG.md            # Historique des versions et mises à jour
+├── .gitignore              # Ignorer node_modules, logs, etc.
+│
+├── public/
+│   └── index.html          # Page principale scrollable et Pi Login actif
+│
+├── src/
+│   ├── style.css           # Design et charte graphique
+│   └── main.js             # Comportement et Pi Login SDK
+│
+└── assets/
+    ├── logo.png            # Logo DANALLODE HUB
+    └── favicon.png         # Favicon pour navigateur / Pi Browser# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# IDE
+.vscode/Initial commit – base structure DANALLODE HUBActivate Pi Login button with SDK integration
