@@ -1,0 +1,115 @@
+/* =====================================================
+   DANALLODE HUB – Style principal
+   Auteur : ALLODE Adantchigbé Hagbégnon Tex
+   Version : 1.0.0
+   ===================================================== */
+
+/* ---------- RESET DE BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- VARIABLES DE COULEURS ---------- */
+:root {
+  --green-dark: #0F3D2E;
+  --gold-soft: #C9A227;
+  --black-deep: #0E0E0E;
+  --white-soft: #F5F5F5;
+}
+
+/* ---------- STYLE GLOBAL ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--black-deep);
+  color: var(--white-soft);
+  line-height: 1.6;
+}
+
+/* ---------- CONTENEUR PRINCIPAL ---------- */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: var(--green-dark);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--gold-soft);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ---------- SECTION ---------- */
+section {
+  margin-top: 40px;
+}
+
+section h2 {
+  color: var(--gold-soft);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+section p {
+  font-size: 1rem;
+}
+
+/* ---------- CARTES ---------- */
+.card {
+  background-color: #141414;
+  border-left: 4px solid var(--gold-soft);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+
+/* ---------- BOUTON ---------- */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--gold-soft);
+  color: var(--black-deep);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #b38f1c;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+  }Add base stylesheet for DANALLODE HUB
