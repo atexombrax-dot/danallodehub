@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DANALLODE HUB - Mini App</title>
+<style>
+    body { margin:0; font-family: Arial,sans-serif; background:#121212; color:#f0f0f0; }
+    header { background: linear-gradient(90deg,#0f3d2e,#0e0e0e); padding:20px; text-align:center; position:sticky; top:0; z-index:100; }
+    header h1 { color:#ff8c00; font-size:1.8em; margin:0; }
+    header p { color:#fff; font-size:0.9em; margin:5px 0 0; }
+    nav { display:flex; justify-content:center; background:#1e1e1e; flex-wrap:wrap; }
+    nav button { background:none; border:none; color:#ff8c00; padding:15px 20px; cursor:pointer; font-weight:bold; transition:0.3s; }
+    nav button:hover { background:#ff8c00; color:#121212; border-radius:5px; }
+    section { padding:20px; }
+    .button-main { display:block; width:80%; margin:20px auto; padding:15px; background:#ff8c00; color:#fff; font-weight:bold; text-align:center; border:none; border-radius:8px; font-size:1em; cursor:pointer; text-decoration:none; transition:0.3s; }
+    .button-main:hover { background:#e57c00; }
+    .actions { display:flex; justify-content:space-around; margin:20px 0; flex-wrap:wrap; gap:10px; }
+    .action { text-align:center; flex:1; min-width:100px; transition: transform 0.3s; cursor:pointer; animation: float 2s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)}50%{transform:translateY(-5px);} }
+    .action img { width:50px; height:50px; }
+    .action h3 { margin:10px 0 5px; font-size:1em; color:#ff8c00; }
+    .action p { font-size:0.8em; color:#ccc; }
+    .entities, .projects { margin:20px 0; display:flex; flex-direction:column; gap:10px; }
+    .card { background:#1e1e1e; padding:15px; border-radius:8px; transition:0.3s; cursor:pointer; display:flex; align-items:center; gap:15px; }
+    .card:hover { transform: translateY(-5px) scale(1.02); background:#262626; }
+    .card img { width:50px; height:50px; animation: spin 4s linear infinite; }
+    @keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
+    .card-content { flex:1; }
+    .card h4 { margin:0 0 5px; color:#ff8c00; }
+    .card p { font-size:0.85em; color:#ccc; }
+    .card button { margin-top:10px; padding:8px 12px; background:#ff8c00; color:#fff; border:none; border-radius:5px; font-size:0.85em; cursor:pointer; transition:0.3s; }
+    .card button:hover { background:#e57c00; }
+    .project-status { display:flex; gap:10px; flex-wrap:wrap; }
+    .project { flex:1; padding:10px; border-radius:8px; text-align:center; font-weight:bold; transition:0.3s; animation: float 2s ease-in-out infinite; }
+    .economic { background:#ff6a00; color:#fff; }
+    .social { background:#d9534f; color:#fff; }
+    .tech { background:#28a745; color:#fff; }
+    .join-section { text-align:center; margin:30px 0; display:flex; justify-content:center; flex-wrap:wrap; gap:10px; }
+    .join-section button { padding:12px 20px; font-weight:bold; border-radius:8px; border:none; font-size:1em; cursor:pointer; transition:0.3s; color:#fff; }
+    .join:hover { background:#e57c00; }
+    .contact:hover { background:#218838; }
+    .join { background:#ff8c00; }
+    .contact { background:#28a745; }
+    footer { text-align:center; padding:20px; font-size:0.75em; color:#777; border-top:1px solid #333; }
+    footer a { color:#ff8c00; text-decoration:none; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/pi-auth@latest/dist/pi-auth.min.js"></script>
+<script>
+    async function openPiApp(appUrl) {
+        if (window.Pi) {
+            try { await window.Pi.authenticate({ appUrl: appUrl }); }
+            catch (err) { alert("Erreur Pi Auth : " + err.message); }
+        } else { alert("Pi Browser non détecté. Veuillez ouvrir cette page dans Pi Browser."); }
+    }
+    function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+</script>
+</head>
+<body>
+
+<header>
+    <h1>DANALLODE HUB</h1>
+    <p>Le portail central du Groupe DANALLODE sur Pi Network</p>
+</header>
+
+<nav>
+    <button onclick="scrollToSection('ecosystem')">Écosystème</button>
+    <button onclick="scrollToSection('entreprises')">Entreprises</button>
+    <button onclick="scrollToSection('projets')">Projets</button>
+    <button onclick="scrollToSection('join')">Rejoindre</button>
+</nav>
+
+<section id="ecosystem">
+    <a class="button-main" href="#entreprises">Découvrir l’écosystème</a>
+    <div class="actions">
+        <div class="action"><img src="https://img.icons8.com/ios-filled/50/ff8c00/organization.png"/><h3>Centraliser</h3><p>Tout regrouper</p></div>
+        <div class="action"><img src="https://img.icons8.com/ios-filled/50/ff8c00/conference-call.png"/><h3>Connecter</h3><p>Créer des liens</p></div>
+        <div class="action"><img src="https://img.icons8.com/ios-filled/50/ff8c00/combo-chart.png"/><h3>Développer</h3><p>Faire évoluer</p></div>
+    </div>
+</section>
+
+<section id="entreprises" class="entities">
+    <h3>Entreprises & Applications</h3>
+    <div class="card">
+        <img src="https://img.icons8.com/color/48/000000/money-transfer.png"/>
+        <div class="card-content">
+            <h4>Pi World MoneyTransfer</h4>
+            <p>Vos transferts d'argent simplifiés</p>
+            <button onclick="openPiApp('https://piworld.pi')">Accéder</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://img.icons8.com/color/48/000000/airplane-take-off.png"/>
+        <div class="card-content">
+            <h4>Wonder World Afrika Tour</h4>
+            <p>Explorez l’Afrique authentique</p>
+            <button onclick="openPiApp('https://wonderworld.pi')">Accéder</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://img.icons8.com/color/48/000000/company.png"/>
+        <div class="card-content">
+            <h4>Autres Entités</h4>
+            <p>Diverses activités du Groupe DANALLODE</p>
+            <button onclick="openPiApp('https://autresentites.pi')">Accéder</button>
+        </div>
+    </div>
+</section>
+
+<section id="projets" class="projects">
+    <h3>Projets en cours</h3>
+    <div class="project-status">
+        <div class="project economic">Économiques<br>En cours</div>
+        <div class="project social">Sociaux<br>À venir</div>
+        <div class="project tech">Technologiques<br>En cours</div>
+    </div>
+</section>
+
+<section id="join" class="join-section">
+    <button class="join" onclick="openPiApp('https://danallode.pi/join')">Rejoindre</button>
+    <button class="contact" onclick="openPiApp('https://danallode.pi/contact')">Nous contacter</button>
+</section>
+
+<footer>
+    ✔ Pi Browser &nbsp; ✔ Pi Auth &nbsp; ✔ Aucune finance &nbsp; <a href="https://danallode.pi">danallode.pi</a><br><br>
+    &copy; DANALLODE HUB - Pi Network Compliant<br>
+    <a href="#">Contact</a> | <a href="#">Politique de confidentialité</a>
+</footer>
+
+</body>
+</html>
